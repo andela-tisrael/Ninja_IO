@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%=title%></title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+ <% include ./partials/navbar %>
+<div class="container">
+<div class="row">
+        
+  <div class="quotes starter-template">
+  <% for(var i=0; i <quotes.length; i++) {%>
+  <div class="col-md-6">
+  <div class="todolist">
+        <h3><%= quotes[i].name %></h3>
+        <p class="lead"><%= quotes[i].quote %></p>
+        </div>
+      </div>
+        <% } %>
+</div>
+</div>
+</div>
+</body>
+</html>
